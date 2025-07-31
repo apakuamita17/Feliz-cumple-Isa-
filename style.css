@@ -1,62 +1,18 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.sticker {
-    position: absolute;
-    animation: flotar 3s ease-in-out infinite;
-}
-
-@keyframes flotar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-.card {
-    background: #ffd700;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    animation: aparecer 2s ease-out;
-}
-
-h1 {
-    color: #e63946;
-}
-
-button {
-    background: #39e6e6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
 .confeti {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #e63946;
+    width: 15px;
+    height: 15px;
+    background: #ffd700;
     border-radius: 50%;
     animation: caer linear infinite;
+    animation-duration: 3s; /* ¡Añade esto! */
 }
 
 @keyframes caer {
+    from {
+        transform: translateY(-50px); /* Empieza arriba */
+    }
     to {
-        transform: translateY(100vh);
+        transform: translateY(100vh); /* Termina abajo */
     }
 }
