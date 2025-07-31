@@ -9,8 +9,18 @@ body {
     min-height: 100vh;
 }
 
+.sticker {
+    position: absolute;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
 .card {
-    background: white;
+    background: #ffd700;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -23,7 +33,7 @@ h1 {
 }
 
 button {
-    background: #e63946;
+    background: #39e6e6;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -36,7 +46,17 @@ button:hover {
     transform: scale(1.05);
 }
 
-@keyframes aparecer {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+.confeti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #e63946;
+    border-radius: 50%;
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(100vh);
+    }
 }
